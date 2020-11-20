@@ -2,7 +2,7 @@ module Api::V1
 	class UsersController < ApplicationController
 		def index
 			@users = User.all
-			render json: @users.as_json(only: [:first_name, :last_name, :email])
+			render json: @users.as_json(only: [:id, :first_name, :last_name, :email])
 		end
 
 		def create
